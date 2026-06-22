@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            padding: 5px;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+            
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">A Tesla Roadster is floating in space – SpaceX launched Elon Musk’s red Tesla in 2018, with a mannequin “Starman” at the wheel. 🚗💨</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: "A Tesla Roadster is floating in space – SpaceX launched Elon Musk’s red Tesla in 2018, with a mannequin “Starman” at the wheel. 🚗💨"},
+            { text: "Apollo 12 astronauts left a 'Moon Museum' – A tiny ceramic art piece with six artists' work is secretly on the Moon. 🎨🌕" },
+            { text: "There’s a message to aliens on the Moon – Apollo 11 left a golden plaque with a message from world leaders. 👽📜" },
+            { text: "Astronauts left golf balls on the Moon – Alan Shepard played golf during Apollo 14, hitting two balls into lunar history. 🏌️‍♂️🌕" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+
+</body>
+</html>
+

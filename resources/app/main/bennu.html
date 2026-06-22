@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+           
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+            
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">NASA’s OSIRIS-REx mission collected about 250 grams (8.8 oz) of material from Bennu in 2020 and successfully returned it to Earth in 2023, providing scientists with untouched asteroid samples.
+        </p>
+        <img id="fact-image" class="fact-image" src="trex.webp" alt="Eris">
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: "NASA’s OSIRIS-REx mission collected about 250 grams (8.8 oz) of material from Bennu in 2020 and successfully returned it to Earth in 2023, providing scientists with untouched asteroid samples.", image: "trex.webp" },
+            { text: "Instead of being a solid rock, Bennu is made of loosely bound boulders and dust, with a porous structure that could make it difficult to deflect if it were on a collision course with Earth.", image: "bennu.jpeg" },
+            { text: "Bennu has a 1-in-1,750 chance of hitting Earth between 2178 and 2290, with its closest potential impact in 2182, making it a key asteroid for planetary defense studies.", image: "collision.jpg" },
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+            document.getElementById("fact-image").src = facts[currentIndex].image;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+
+</body>
+</html>

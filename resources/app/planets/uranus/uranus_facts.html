@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uranus Facts</title>
+    <style>
+        body {
+            background-color: #041f2d;
+            color: #a3f7ff;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin: 0 100px;
+            font-weight: bold;
+            border: 3px double #a3f7ff;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid #a3f7ff;
+            color: #a3f7ff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #a3f7ff;
+            color: #041f2d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fact-container">
+    <p id="fact-text" class="fact-text">Uranus rotates on its side, making it unique in the solar system.</p>
+    <img id="fact-image" class="fact-image" src="../dyn.avif" alt="Uranus">
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevFact()">&#8592;</button>
+    <button onclick="nextFact()">&#8594;</button>
+</div>
+
+<script>
+    let facts = [
+        { text: "Uranus rotates on its side, making it unique in the solar system." },
+        { text: "Uranus has 13 known rings and 27 moons." },
+        { text: "It is often called an 'ice giant' due to its cold, icy atmosphere."},
+        { text: "Uranus takes 84 Earth years to complete one orbit around the Sun." },
+        { text: "Its atmosphere is mostly hydrogen, helium, and methane." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFact() {
+        document.getElementById("fact-text").textContent = facts[currentIndex].text;
+    }
+
+    function nextFact() {
+        currentIndex = (currentIndex + 1) % facts.length;
+        updateFact();
+    }
+
+    function prevFact() {
+        currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+        updateFact();
+    }
+</script>
+
+</body>
+</html>

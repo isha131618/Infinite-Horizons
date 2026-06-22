@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border: 3px double powderblue;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text"></p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: " A lost screwdriver once became space junk – An astronaut accidentally let go of a tool during a spacewalk, and it floated away! 🔧🛰️" },
+            { text: "There are over 100 million pieces of space debris – Ranging from tiny paint flecks to dead satellites. 🗑️🌍" },
+            { text: "Space junk moves faster than bullets – Some debris orbits Earth at 28,000 km/h, making it dangerous for satellites. 🚀💥" },
+            { text: "The Kessler Syndrome is a real danger – If too much space junk collides, it could create a chain reaction, making low Earth orbit unusable. 💥🗑️🚀" },
+            { text: "NASA tracks space junk in real-time – Using radar and telescopes, agencies monitor objects to avoid collisions. 🛰️📡" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+
+        // Initialize with the first fact
+        updateFact();
+    </script>
+
+</body>
+</html>

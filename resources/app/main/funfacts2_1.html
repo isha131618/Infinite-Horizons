@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: 100px;
+            padding: 5px;
+            margin-right: 100px;
+            font-weight: bold;
+            border: 3px double powderblue;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text"></p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+    { text: "1️⃣ 🕳️ Black holes don’t 'suck' like a vacuum – Objects must cross the event horizon to be pulled in!" },
+    { text: "2️⃣ ⏳ Time slows down near a black hole – If you fell in, an observer would see you freeze at the event horizon." },
+    { text: "3️⃣ 🍝 Spaghettification is real! Extreme gravity stretches objects into thin strands near a black hole." },
+    { text: "4️⃣ ☄️ Black holes evaporate – They slowly lose mass over time due to Hawking Radiation." },
+    { text: "5️⃣ 🌊 Black hole mergers create gravitational waves – We detect them with observatories like LIGO and Virgo." },
+    { text: "6️⃣ 💫 A supermassive black hole (Sagittarius A*) sits at the center of our Milky Way galaxy!" },
+    { text: "7️⃣ ⚡ Some black holes spin at near-light speeds, dragging space and time along with them!" },
+    { text: "8️⃣ 🏵️ Some black holes could be as small as an atom but still incredibly dense!" },
+    { text: "9️⃣ 🚀🌌 Black holes can shoot powerful space jets stretching thousands of light-years!" },
+    { text: "🔟 📸🖤 The first real image of a black hole was taken in 2019 by the Event Horizon Telescope!" },
+    { text: "1️⃣1️⃣ ⚡🔋 A black hole’s energy could theoretically power an entire advanced civilization!" },
+    { text: "1️⃣2️⃣ 🤫 Some black holes are 'silent' and don’t actively consume matter, making them hard to detect." },
+    { text: "1️⃣3️⃣ 🔮 Black holes bend light, creating a gravitational lensing effect that lets us see objects behind them!" },
+    { text: "1️⃣4️⃣ 🚶‍♂️💨 Rogue black holes wander the universe, drifting unseen through space!" },
+    { text: "1️⃣5️⃣ 🏗️🌍 The largest known black hole, TON 618, is **66 billion times** the mass of the Sun!" },
+    { text: "1️⃣6️⃣ 📡 Scientists believe tiny 'primordial black holes' may have formed right after the Big Bang!" },
+    { text: "1️⃣7️⃣ 🔄 Some black holes may have wormholes inside them, theoretically connecting distant points in space!" },
+    { text: "1️⃣8️⃣ 💥 Some black holes might explode instead of evaporating, releasing a massive burst of energy!" },
+    { text: "1️⃣9️⃣ 🌠 If a black hole replaced our Sun, Earth wouldn’t be 'sucked in'—it would keep orbiting in darkness." },
+    { text: "2️⃣0️⃣ 🕶️ Black holes are actually invisible! We only 'see' them because of the light bending around them." },
+    { text: "2️⃣1️⃣ 🛸 Some theories suggest black holes could be 'portals' to other universes!" },
+    { text: "2️⃣2️⃣ 🌌 The Milky Way might have **hundreds of millions** of black holes, but most are hidden!" },
+    { text: "2️⃣3️⃣ 🔄 The area around a black hole can be so energetic that it produces X-rays detectable from Earth!" },
+    { text: "2️⃣4️⃣ 🌪️ Black holes can distort and twist space-time like a cosmic tornado!" },
+    { text: "2️⃣5️⃣ 🎭 Some theories suggest black holes could have 'firewalls'—high-energy barriers at their event horizons!" }
+];
+
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+
+        // ✅ Initialize first fact
+        updateFact();
+    </script>
+
+</body>
+</html>

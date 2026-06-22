@@ -1,0 +1,372 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+       }
+
+       /* Top Section with Image */
+       .hero {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url(asteroid.jpg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+       }
+       .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          max-width: 1000px;
+          margin: 40px auto;
+          padding: 30px;
+      }
+
+      .grid-container div {
+    padding: 0; /* Remove padding to avoid affecting the image dimensions */
+    background: rgb(71, 71, 71);
+    text-align: center;
+    height: 300px; /* Set a fixed height for the grid items */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+      .img1 {
+        width: 100%; /* Ensures the image takes up the full width of the container */
+        height: 100%; /* Ensures the image takes up the full height of the container */
+        position: relative; /* Required for pseudo-elements to position correctly */
+        overflow: hidden; /* Ensures content doesn't overflow the container */
+        border: 2px pink dotted;
+    }
+
+    .img1::before {
+        content: ""; /* Required for the pseudo-element to render */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('Ctypee.jpg'); /* Corrected file path */
+        background-size: cover;
+        background-position: center;
+        opacity: 1; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img1::after {
+        content: "C-type (Carbonaceous) Asteroids – The most common type, making up about 75% of known asteroids. These are dark in appearance and rich in carbon-based compounds, similar to primitive solar system material.";
+        text-align: center;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        padding: 5px 10px;
+        border-radius: 5px;
+        opacity: 0; /* Initially visible */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img1:hover::before {
+        opacity: 0; /* Show the background image on hover */
+    }
+
+    .img1:hover::after {
+        opacity: 1; /* Hide the text on hover */
+    }
+    .img2 {
+        width: 100%; /* Ensures the image takes up the full width of the container */
+        height: 100%; /* Ensures the image takes up the full height of the container */
+        position: relative; /* Required for pseudo-elements to position correctly */
+        overflow: hidden; /* Ensures content doesn't overflow the container */
+        border: 2px pink dotted;
+    }
+
+    .img2::before {
+        content: ""; /* Required for the pseudo-element to render */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(stype.jpeg); /* Corrected file path */
+        background-size: cover;
+        background-position: center;
+        opacity: 1; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img2::after {
+        content: "S-type (Silicaceous) Asteroids – Composed mostly of silicate (rocky) materials and metals, making up around 17% of known asteroids. They reflect more light and appear brighter.";
+        text-align: center;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        padding: 5px 10px;
+        border-radius: 5px;
+        opacity: 0; /* Initially visible */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img2:hover::before {
+        opacity: 0; /* Show the background image on hover */
+    }
+
+    .img2:hover::after {
+        opacity: 1; /* Hide the text on hover */
+    }
+    .img3 {
+        width: 100%; /* Ensures the image takes up the full width of the container */
+        height: 100%; /* Ensures the image takes up the full height of the container */
+        position: relative; /* Required for pseudo-elements to position correctly */
+        overflow: hidden; /* Ensures content doesn't overflow the container */
+        border: 2px pink dotted;
+    }
+
+    .img3::before {
+        content: ""; /* Required for the pseudo-element to render */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(mtype.webp); /* Corrected file path */
+        background-size: cover;
+        background-position: center;
+        opacity: 1; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img3::after {
+        content:"M-type (Metallic) Asteroids – Rich in metals like iron and nickel. These are rare but valuable as they contain large amounts of heavy elements.";
+        text-align: center;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        padding: 5px 10px;
+        border-radius: 5px;
+        opacity: 0; /* Initially visible */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img3:hover::before {
+        opacity: 0; /* Show the background image on hover */
+    }
+
+    .img3:hover::after {
+        opacity: 1; /* Hide the text on hover */
+    }
+
+
+
+
+       /* Dark overlay effect */
+       .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+       }
+
+       .overlay-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+       }
+
+       h1 {
+        font-size: 6em;
+        font-family: 'Lilita One', cursive;
+        color: beige;
+
+        
+        text-decoration: underline;
+        text-align: center;
+        
+        text-shadow: 3px 3px palevioletred;
+        animation:fadeIn 3s ease-in-out forwards;
+
+       }
+       @keyframes fadeIn {
+        from{opacity:0;transform:scale(0.8);}
+        to{opacity:1;transform: scale(1);}
+       }
+
+       p {
+        font-size: 1.2em;
+        color: palevioletred;
+        text-shadow: 1px 1px whitesmoke;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+       }
+
+       /* Bottom Section (White Background) */
+       .overview {
+        text-align: left;
+        background-color:black;
+        padding: 50px 20px;
+        text-align: center;
+        
+        
+       }
+
+       h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(225, 220, 220);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+
+       }
+       h3{
+        font-size: 1.5em;
+        color: rgb(207, 200, 200);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+       }
+
+       h4 {
+        font-size: 1em;
+        color: rgb(158, 154, 154);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+        text-align: left;
+        margin: 40px;
+        margin-left: 40px;
+       }
+       
+       ol {
+        margin-left: 100px;
+    
+        display: inline-block;
+       }
+       button {
+            width: 50%;
+            padding: 10px;
+            background:palevioletred;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            margin:100px
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Section with Image -->
+    <div class="hero">
+        <div class="overlay-content">
+            <h1 style="text-decoration:none" ><span style="font-size: larger;">Asteroids</span></h1><br>
+            <p>Our solar system has millions of asteroids. In order of size, the largest are: Ceres, Vesta, Pallas, and Hygiea.</p>
+        </div>
+    </div>
+
+    <div class="overview">
+        <h2>An Overview on Asteroids</h2><br>
+        <h4>Asteroids are small, rocky objects that orbit the Sun, primarily found in the Asteroid Belt between Mars and Jupiter. Unlike planets, they are irregularly shaped and lack atmospheres. These objects are remnants from the early formation of the solar system, leftover building blocks that never coalesced into a planet.
+        </h4>
+        <br>
+        <h3>Where Are Asteroids Found?</h3><br>
+        <h4>
+            <ol>
+                <li><b>Asteroid Belt:</b> The majority of asteroids are located here, a region between Mars and Jupiter containing millions of rocky bodies.</li><br>
+                <li><b>Near-Earth Asteroids (NEAs):</b> These asteroids have orbits that bring them close to Earth. Some pose potential impact risks.</li><br>
+                <li><b>Trojan Asteroids:</b> These share an orbit with a larger planet, typically staying in gravitationally stable points ahead of or behind the planet. Jupiter has the most known Trojans.</li><br>
+                <li><b>Kuiper Belt & Oort Cloud:</b>While mostly home to icy bodies, some asteroids exist in these outer solar system regions.
+                </li><br>
+            </ol>
+        </h4>
+    
+    <br>
+    <h2 style="text-decoration: none;">Types of Asteroids</h2><br>
+    <div class="grid-container">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+
+    </div><br><br>
+    <h2 style="text-decoration: none;">Famous Asteroids</h2><br>
+    
+        
+        <h2 style="text-decoration: none;">Ceres</h2><br>
+        <a href="hhh.html" target="right">
+        <img src="ceres.jpg" alt="Ceres" style="width: 40%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>The largest asteroid and the only one classified as a dwarf planet. It has a diameter of about 940 km and even contains signs of water ice.
+            <br><br>
+            Ceres is believed to have a solid core and an icy mantle, with a dusty and rocky crust covering its surface. Scientists suspect that a significant portion of Ceres' composition—up to 25%—is ice. This makes it an intriguing candidate for studying water in the early solar system. The dwarf planet’s surface is marked by bright salt deposits, most notably within the Occator Crater. These deposits suggest that liquid water or briny subsurface reservoirs may have once existed beneath its surface. NASA’s Dawn spacecraft, which orbited Ceres between 2015 and 2018, provided strong evidence of possible deep water reservoirs that could have interacted with the surface due to asteroid impacts.
+            <br><br>
+        
+        </h4><br>
+        
+        <h2 style="text-decoration: none;">Vesta</h2><br>
+        <a href="vestafacts.html" target="right">
+        <img src="vesta.jpg" alt="Pluto" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>Vesta is the second-largest asteroid in the main asteroid belt, with a diameter of about 525 kilometers (326 miles). It has a bright, reflective surface due to its basaltic composition, making it one of the easiest asteroids to observe from Earth. Scientists believe Vesta once had a molten interior, suggesting early volcanic activity. A massive impact created the Rheasilvia crater, nearly the size of Vesta itself, and likely ejected fragments that later fell to Earth as meteorites. NASA’s Dawn spacecraft studied Vesta from 2011 to 2012, revealing details about its complex geological history.
+
+
+            
+            </h4><br>
+        
+        <h2 style="text-decoration: none;">Eros</h2><br>
+        <a href="eros.html" target="right">
+        <img src="eris.jpg" alt="Haumea" style="width: 100%; max-width: 225px; margin: 20px auto;"><br></a>
+        <h4>Eros is a near-Earth asteroid with an elongated shape, measuring about 34.4 kilometers (21.4 miles) in length. It was the first asteroid to be orbited and landed on by a spacecraft—NASA’s NEAR Shoemaker in 2001. Eros belongs to the S-type asteroids, meaning it is composed mainly of silicate rock and nickel-iron. Scientists study Eros to understand the composition of asteroids that could potentially impact Earth. Its surface is covered in craters and boulders, with some features suggesting it has experienced violent collisions over time.
+
+
+            
+            </h4><br>
+        
+        <h2 style="text-decoration: none;">Bennu</h2><br>
+        <a href="bennu.html" target="right">
+        <img src="bennu.jpeg" alt="Makemake" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>Bennu is a small, near-Earth asteroid about 500 meters (1,640 feet) in diameter. It is a carbon-rich asteroid, meaning it contains organic molecules that could offer clues about the origins of life. NASA’s OSIRIS-REx spacecraft visited Bennu, collected samples in 2020, and returned them to Earth in 2023. Bennu’s surface is rough and covered in boulders, with signs that it is a "rubble pile" asteroid—formed from fragments of a larger body. It has a slight chance of impacting Earth in the late 2100s, making it a key target for asteroid impact studies.
+
+
+            
+            </h4><br>
+        
+           
+    </div>    
+    
+
+</body>
+</html>

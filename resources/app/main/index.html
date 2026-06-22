@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFINITE HORIZONS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+</head>
+<body>
+    <header id="navbar">
+        <button class="menu-icon" onclick="toggleMenu()" id="menuButton">☰</button>
+        <div class="logo"><img src=../images/l.png class="logo2" /></div>
+
+        <div class="sidebar" id="sidebar">
+            <a href="#hero">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="#content">Planets</a>
+            <a href="#container">Explore</a>
+            <a href="../forum/forum.html">Forum</a>
+            <a href="../contact/contact.html" target="_self">Contact</a>
+
+        </div>
+        
+        
+        <div class="auth-buttons">
+            <a href="LogIn.html" class="login-btn">LogIn</a>
+        </div>
+        
+    </header>
+
+    <section id="hero">
+        <h1 id="title">INFINITE HORIZONS</h1>
+        <button id="scroll-down">▼</button>
+    </section>
+
+    <section id="content">
+        <div class="planet-container" id="planet-display">
+            <button class="arrow" id="prevPlanet">←</button>
+            <div class="planet" id="planet"></div>
+            <div class="des">
+                <h2 id="planet-name"></h2>
+                <p id="planet-description"></p>
+                <button class="button">Learn More</button>
+            </div>
+            <button class="arrow" id="nextPlanet">→</button>
+        </div>
+        <button id="scroll-down1">▼</button>
+    </section>
+
+    
+    <script src="script.js"></script>
+    <br>
+    <h1><center>More about space!</center></h1>
+    <div class="container" id="container" style="background-image:url("C:\Users\Ishwari Suryavanshi\OneDrive\html files\UID Project\UID\images\bw.jpg");">
+        <div class="box1" onclick="location.href='frameshit.html'"></div>
+        <div class="box2" onclick="location.href='frame2.html'"></div>
+        <div class="box3" onclick="location.href='frame3.html'"></div>
+        <div class="box4" onclick="location.href='frame4.html'"></div>
+        <div class="box5" onclick="location.href='frames5.html'"></div>
+        <div class="box6" onclick="location.href='Asteroidfinal.html'"></div>
+        <div class="box7" onclick="location.href='Galaxiesfinal.html'"></div>
+        <div class="box9" onclick="location.href='Cosmicfinal.html'"></div>
+        <div class="box8" onclick="location.href='Starsfinal.html'"></div>
+        <div class="box10" onclick="location.href='quizmain.html'"></div>
+    </div>
+    <br>
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-newsletter">
+                <h3>Join Our Space Newsletter</h3>
+                <p>Subscribe for monthly updates, discoveries, and cosmic insights.</p>
+                <form id="newsletterForm">
+                  <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                  <button type="submit">Subscribe</button>
+                </form>
+                <p id="formMessage" ></p>
+              </div>
+              
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> contact@infinitehorizons.com</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Space Street, Galaxy HQ</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="#content">Planets</a></li>
+                    <li><a href="#container">Explore</a></li>
+                    <li><a href="../forum/forum.html">Forum</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Infinite Horizons | All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    
+    
+</body>
+</html>

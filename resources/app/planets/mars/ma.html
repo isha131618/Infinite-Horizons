@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #f3f3f3;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('marsbg.avif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: #ffe6e0;
+            text-shadow: 3px 3px #b22222;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .overview {
+            padding: 50px 25px;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #ff4500;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #ff4500;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+
+        table, th, td {
+            border: 1px solid #888;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #ff4500;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #ff4500;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #444;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Mars</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Mars</h2>
+    <a href="mars_facts.html" target="right">
+        <img src="mars.jpg" alt="Mars" class="planet-image">
+    </a>
+
+    <p>
+        Mars, known as the Red Planet due to its iron oxide-rich soil, is the fourth planet from the Sun and a major focus of planetary exploration. Slightly over half the diameter of Earth, it has a thin atmosphere made mostly of carbon dioxide and dramatic features including enormous volcanoes and deep canyons.
+    </p>
+
+    <p>
+        The planet experiences seasons similar to Earth due to its tilted axis. It has polar ice caps, dust storms, and signs of ancient water flows that suggest it may have once supported microbial life.
+    </p>
+
+    <p>
+        Mars has two small moons, Phobos and Deimos. Robotic missions like <strong>Viking</strong>, <strong>Curiosity</strong>, <strong>Perseverance</strong>, and orbiters like <strong>MAVEN</strong> and <strong>Mars Reconnaissance Orbiter</strong> have provided vast amounts of data about the Martian surface and atmosphere.
+    </p>
+
+    <p>
+        Mars is a top candidate for future human colonization, with space agencies planning crewed missions in the coming decades.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Mars at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>6,779 km (4,212 miles)</td></tr>
+        <tr><td>Distance from Sun</td><td>227.9 million km (141.6 million miles)</td></tr>
+        <tr><td>Orbital Period</td><td>687 Earth days</td></tr>
+        <tr><td>Rotation Period</td><td>24.6 hours</td></tr>
+        <tr><td>Temperature Range</td><td>-125°C to 20°C</td></tr>
+        <tr><td>Atmosphere</td><td>Carbon dioxide, nitrogen, argon</td></tr>
+        <tr><td>Moons</td><td>2 (Phobos & Deimos)</td></tr>
+        <tr><td>Rings</td><td>None</td></tr>
+        <tr><td>Magnetic Field</td><td>Weak, patchy magnetic crust</td></tr>
+        <tr><td>First Spacecraft Visit</td><td>Mariner 4 (1965)</td></tr>
+        <tr><td>Current Missions</td><td>Perseverance, Ingenuity, MAVEN, and others</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/D8pnmwOXhoY" title="Mars 101 | National Geographic" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Vy_RPd0rblI?si=hze3jyJQdNYx1zE_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4czjS9h4Fpg?si=2A_4cawl2ksNaAFJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+</div>
+
+</body>
+</html>

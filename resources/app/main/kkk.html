@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+           
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+            
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">A day on Haumea is about four Eart hours</p>
+        <img id="fact-image" class="fact-image" src="aday.webp" alt="Eris">
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: "A day on Haumea is about four Eart hours.", image: "aday.webp" },
+            { text: "It takes 285 Earth years for Haumea to orbit the Sun", image: "aday.webp" },
+            { text: "Haumea's radius id about 385 miles or 620 kilometers", image: "aday.webp" },
+            { text: "Haumea has two knows moons: Namaka is the inner moon ,and Hi'iaka", image: "ceres_2.webp" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+            document.getElementById("fact-image").src = facts[currentIndex].image;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+
+</body>
+</html>

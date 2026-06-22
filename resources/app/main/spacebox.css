@@ -1,0 +1,531 @@
+body {
+            background-color: black;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 280px);
+            gap: 50px;
+            text-align: center;
+            margin: 50px 30px auto;
+        }
+        .box1 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box1::before {
+        content: "";
+        background-image: url(dwarfplanet.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box1::after {
+        content: "Dwarf Planets";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box1:hover::before {
+            opacity: 1;
+        }
+        .box1:hover::after {
+            opacity: 0;
+        }
+
+        .box2 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box2::before {
+        content: "";
+        background-image: url(satlite.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        
+        .box2::after {
+        content: "Human Made Objects in Space";
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: normal;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box2:hover::before {
+            opacity: 1;
+        }
+        .box2:hover::after {
+            opacity: 0;
+        }
+            
+        .box {
+            width: 300px;
+            height: 300px;
+            background: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.5s ease-in-out;
+
+        }
+        
+        .box3 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box3::before {
+        content: "";
+        background-image: url(blackh.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box3::after {
+        content: "Black Hole";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box3:hover::before {
+            opacity: 1;
+        }
+        .box3:hover::after {
+            opacity: 0;
+        }
+        .box4 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box4::before {
+        content: "";
+        background-image: url(supernova\ \(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box4::after {
+        content: "Nebulae";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box4:hover::before {
+            opacity: 1;
+        }
+        .box4:hover::after {
+            opacity: 0;
+        }
+        .box5 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box5::before {
+        content: "";
+        background-image: url(comet\(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box5::after {
+        content: "Comet";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box5:hover::before {
+            opacity: 1;
+        }
+        .box5:hover::after {
+            opacity: 0;
+        }
+        .box6 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box6::before {
+        content: "";
+        background-image: url(asteroid\(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box6::after {
+        content: "Asteroids";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box6:hover::before {
+            opacity: 1;
+        }
+        .box6:hover::after {
+            opacity: 0;
+        }
+        .box7 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box7::before {
+        content: "";
+        background-image: url(galaxies\(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box7::after {
+        content: "Galaxies";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box7:hover::before {
+            opacity: 1;
+        }
+        .box7:hover::after {
+            opacity: 0;
+        }
+        .box8 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box8::before {
+        content: "";
+        background-image: url(stars.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box8::after {
+        content: "Stars";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box8:hover::before {
+            opacity: 1;
+        }
+        .box8:hover::after {
+            opacity: 0;
+        }
+        .box9 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box9::before {
+        content: "";
+        background-image: url(phenon\ \(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box9::after {
+        content: "Cosmic Phenomena";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: normal;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box9:hover::before {
+            opacity: 1;
+        }
+        .box9:hover::after {
+            opacity: 0;
+        }
+        .box:hover, .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover,.box6:hover,.box7:hover,.box8:hover,.box9:hover {
+            transform:scale(1.1);
+        }
+        .box10 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 2px 2px rgb(240, 127, 228);
+        transition: transform 0.5s ease-in-out;
+        border: 2px pink dotted;
+        }
+        .box10::before {
+        content: "";
+        background-image: url(Astronaut\ 2\ \(1\).jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+        z-index: -1;
+
+        }
+        .box10::after {
+        content: "Fun Facts";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 16px;
+        letter-spacing: 2px;
+        white-space: normal;
+        transition: opacity 0.5s ease-in-out;
+
+        }
+        .box10:hover::before {
+            opacity: 1;
+        }
+        .box10:hover::after {
+            opacity: 0;
+        }
+        .box:hover, .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover,.box6:hover,.box7:hover,.box8:hover,.box9:hover,.box10:hover {
+            transform:scale(1.1);
+        }
+
+        .box:hover {
+            background: deepskyblue;
+        }
+        h1 {
+            color: white;
+            text-shadow: 1px 2px plum;
+        }

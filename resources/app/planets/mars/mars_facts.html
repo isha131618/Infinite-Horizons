@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Facts</title>
+    <style>
+        body {
+            background-color: #2b1d1b;
+            color: #ff6f61;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin: 0 100px;
+            font-weight: bold;
+            border: 3px double #ff6f61;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid #ff6f61;
+            color: #ff6f61;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #ff6f61;
+            color: #2b1d1b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fact-container">
+    <p id="fact-text" class="fact-text">Mars is often called the Red Planet due to iron oxide on its surface.</p>
+    <img id="fact-image" class="fact-image" src="../dyn.avif" alt="Mars">
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevFact()">&#8592;</button>
+    <button onclick="nextFact()">&#8594;</button>
+</div>
+
+<script>
+    let facts = [
+        { text: "Mars is often called the Red Planet due to iron oxide on its surface." },
+        { text: "Mars has the tallest volcano in the solar system—Olympus Mons." },
+        { text: "Mars has two moons: Phobos and Deimos." },
+        { text: "Mars once had liquid water on its surface." },
+        { text: "The Martian year is 687 Earth days long." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFact() {
+        document.getElementById("fact-text").textContent = facts[currentIndex].text;
+       
+    }
+
+    function nextFact() {
+        currentIndex = (currentIndex + 1) % facts.length;
+        updateFact();
+    }
+
+    function prevFact() {
+        currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+        updateFact();
+    }
+</script>
+
+</body>
+</html>

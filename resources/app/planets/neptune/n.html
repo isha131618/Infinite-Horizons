@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neptune</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a2a;
+            color: #d0eaff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('neptunebg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 51, 0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: #9ecfff;
+            text-shadow: 3px 3px #1e90ff;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .overview {
+            padding: 50px 25px;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #1e90ff;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #1e90ff;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+
+        table, th, td {
+            border: 1px solid #777;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #112244;
+            color: #87cefa;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #1e90ff;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #555;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Neptune</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Neptune</h2>
+    <a href="neptune_facts.html" target="right">
+        <img src="neptune.jpg" alt="Neptune" class="planet-image">
+    </a>
+
+    <p>
+        Neptune is the eighth and farthest known planet from the Sun in the Solar System. It is an ice giant, like Uranus, and has a dynamic atmosphere with the fastest winds in the solar system—reaching speeds of over 2,000 km/h.
+    </p>
+
+    <p>
+        Its deep blue color is due to the absorption of red light by methane in its atmosphere. Neptune has a very active climate with huge storms and dark spots similar to Jupiter’s Great Red Spot.
+    </p>
+
+    <p>
+        The planet has 14 known moons, the largest of which is Triton—a moon that orbits in the opposite direction of Neptune’s rotation, suggesting it was captured from the Kuiper Belt.
+    </p>
+
+    <p>
+        Neptune was the first planet discovered through mathematical prediction rather than direct observation. It was officially identified in 1846 and visited only once by Voyager 2 in 1989.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Neptune at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>49,244 km (30,598 miles)</td></tr>
+        <tr><td>Distance from Sun</td><td>4.5 billion km (2.8 billion miles)</td></tr>
+        <tr><td>Orbital Period</td><td>165 Earth years</td></tr>
+        <tr><td>Rotation Period</td><td>16.1 hours</td></tr>
+        <tr><td>Atmosphere</td><td>Hydrogen, Helium, Methane</td></tr>
+        <tr><td>Moons</td><td>14</td></tr>
+        <tr><td>Rings</td><td>5 faint rings</td></tr>
+        <tr><td>Wind Speeds</td><td>Over 2,000 km/h</td></tr>
+        <tr><td>Magnetic Field</td><td>Yes (tilted and offset)</td></tr>
+        <tr><td>First & Only Visit</td><td>Voyager 2 (1989)</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NStn7zZKXfE?si=YBQ77Wu682gXwFQl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DhLm_4pBrso?si=VxrzmZG4_9XrtY9z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>

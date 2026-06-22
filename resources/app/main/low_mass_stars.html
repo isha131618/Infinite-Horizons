@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Mass Stars</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+        }
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">Low mass stars, like red dwarfs, are the most common type of star in the universe.</p>
+        <img id="fact-image" class="fact-image"  >
+    </div>
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button>
+        <button onclick="nextFact()">&#8594;</button>
+    </div>
+    <script>
+        let facts = [{"text": "Low mass stars, like red dwarfs, are the most common type of star in the universe."}, {"text": "These stars burn their fuel slowly and can live for tens to hundreds of billions of years."}, {"text": "Low mass stars end their lives by becoming white dwarfs without going supernova."}, {"text": "Despite their small size, low mass stars can host planetary systems."}];
+        let currentIndex = 0;
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+</body>
+</html>

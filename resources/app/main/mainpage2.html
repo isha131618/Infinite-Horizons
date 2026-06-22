@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Made Objects In Space</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+       }
+
+       /* Top Section with Image */
+       .hero {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url(StockCake-Space\ Debris\ Surrounding_1743055286.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+       }
+
+       /* Dark overlay effect */
+       .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+       }
+
+       .overlay-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+       }
+
+       h1 {
+        font-size: 6em;
+        font-family: 'Lilita One', cursive;
+        color: beige;
+
+        
+        text-decoration: underline;
+        text-align: center;
+        
+        text-shadow: 3px 3px palevioletred;
+        animation:fadeIn 3s ease-in-out forwards;
+
+       }
+       @keyframes fadeIn {
+        from{opacity:0;transform:scale(0.8);}
+        to{opacity:1;transform: scale(1);}
+       }
+
+       p {
+        font-size: 1.2em;
+        color: palevioletred;
+        text-shadow: 1px 1px whitesmoke;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+       }
+
+       /* Bottom Section (White Background) */
+       .section {
+        text-align: left;
+        background-color:black;
+        padding: 50px 20px;
+        text-align: left;
+
+        
+        
+       }
+
+       h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(225, 220, 220);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+
+       }
+       h3{
+        font-size: 1.5em;
+        color: rgb(207, 200, 200);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+       }
+
+       h4 {
+        font-size: 1;
+        color: rgb(158, 154, 154);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+        text-align: left;
+        margin: 40px;
+        margin-left: 40px;
+       }
+       
+       ul {
+        font-size: 1;
+        margin-left: 100px;
+        color: rgb(158, 154, 154);
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+    
+        display: inline-block;
+       }
+       .image-container img {
+            display: inline-block;
+            width: 45%; /* Adjust width as needed */
+            margin-right: 5px; /* Space between images */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Section with Image -->
+    <div class="hero">
+        <div class="overlay-content">
+            <h1 style="text-decoration:none" >Human-Made Objects <br> <span style="font-size: larger;">In Space</span></h1><br>
+            <p>Space is not empty; it carries the footprints of human curiosity, from satellites to rovers, whispering our quest to explore the unknown..</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>1. Artificial Satellites 🛰️</h2>
+        <a href="funfacts4.html" target="right">
+            <center><img src="as.webp" alt="Ceres" style="width: 100%; max-width: 820px; margin: 20px auto;"></center><br></a>
+        <h4>Artificial satellites are human-made objects placed in orbit around celestial bodies for various applications, including communication, navigation, Earth observation, scientific research, and military surveillance.</h4>
+        <h3>Types of Satellites</h3>
+        <ul>
+            <li><strong>Geostationary Satellites:</strong> Orbit at 35,786 km above Earth’s equator and provide constant coverage for telecommunications and weather monitoring.</li>
+            <li><strong>Low Earth Orbit (LEO) Satellites:</strong> Positioned at altitudes between 180 km and 2,000 km, used for Earth observation, communications, and space research.</li>
+            <li><strong>Medium Earth Orbit (MEO) Satellites:</strong> Found at altitudes of 2,000 km to 35,786 km, primarily used for navigation and communications.</li>
+        </ul>
+        <h3>Notable Satellites</h3>
+        <ul>
+            <li><strong>Hubble Space Telescope:</strong> Launched in 1990, providing deep space imagery and advancing astronomical research.</li>
+            <li><strong>James Webb Space Telescope:</strong> Successor to Hubble, launched in 2021, specializing in infrared observations.</li>
+            <li><strong>Sputnik 1:</strong> First artificial satellite launched by the Soviet Union in 1957.</li>
+            <li><strong>Starlink Constellation:</strong> A large network of satellites by SpaceX for global internet coverage.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>2. Space Probes 🚀</h2>
+        <a href="funfacts5.html" target="right">
+            <center><img src="sp.jpg" alt="Ceres" style="width: 100%; max-width: 820px; margin: 20px auto;"></center><br></a>
+        <h4>Space probes are robotic spacecraft that travel beyond Earth's orbit to explore celestial bodies and transmit scientific data.</h4>
+        <h3>Interplanetary Probes</h3>
+        <ul>
+            <li><strong>Voyager 1 & 2:</strong> Launched in 1977, these probes have traveled beyond the solar system, sending back valuable data on interstellar space.</li>
+            <li><strong>New Horizons:</strong> Explored Pluto in 2015 and continues its journey into the Kuiper Belt.</li>
+            <li><strong>Mariner Missions:</strong> A series of NASA probes that explored Mercury, Venus, and Mars.</li>
+        </ul>
+        <h3>Planetary Landers</h3>
+        <ul>
+            <li><strong>Viking 1 & 2:</strong> First successful Mars landers, providing surface images and soil analysis.</li>
+            <li><strong>InSight:</strong> Studying Mars’ interior and seismic activity.</li>
+            <li><strong>Huygens Probe:</strong> Landed on Titan, Saturn’s largest moon, in 2005.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>3. Space Stations & Habitats 🏢</h2>
+        <a href="funfacts1.html" target="right">
+            <div class="image-container">
+                <img src="ss.jpg" alt="Image 1">
+                <img src="hh.jpg" alt="Image 2">
+            </div><br></a>
+        <h4>Space stations are orbital research platforms that support long-term human spaceflight.</h4>
+        <h3>Major Space Stations</h3>
+        <ul>
+            <li><strong>International Space Station (ISS):</strong> A multinational research laboratory orbiting Earth since 1998.</li>
+            <li><strong>Tiangong:</strong> China’s space station, currently operational with long-term missions.</li>
+            <li><strong>Mir:</strong> Soviet/Russian station that operated from 1986 to 2001.</li>
+        </ul>
+        <h3>Future Developments</h3>
+        <ul>
+            <li><strong>Gateway Lunar Station:</strong> Planned NASA-led project orbiting the Moon.</li>
+            <li><strong>Axiom Space Station:</strong> A commercial space station expected to be launched in the coming decade.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>4. Rovers & Landers 🚜</h2>
+        <a href="funfacts2.html" target="right">
+            <div class="image-container">
+                <img src="ro.jpg" alt="Image 1">
+                <img src="la.webp" alt="Image 2"><br></a>
+        <h4>Rovers and landers play crucial roles in planetary exploration by collecting soil samples, analyzing atmospheric conditions, and capturing images.</h4>
+        <h3>Moon Missions</h3>
+        <ul>
+            <li><strong>Apollo Lunar Modules:</strong> Carried astronauts to the Moon during the Apollo missions.</li>
+            <li><strong>Lunokhod Rovers:</strong> Soviet robotic rovers that explored the Moon in the 1970s.</li>
+            <li><strong>Chandrayaan-3:</strong> India’s latest lunar exploration mission, successfully landing in 2023.</li>
+        </ul>
+        <h3>Mars Rovers</h3>
+        <ul>
+            <li><strong>Curiosity:</strong> Studying Mars' climate and geology since 2012.</li>
+            <li><strong>Perseverance & Ingenuity:</strong> Exploring signs of ancient life and testing aerial flight on Mars.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>5. Future Technologies 🚀</h2>
+        <a href="funfacts3.html" target="right">
+            <div class="image-container">
+                <img src="ass.png" alt="Image 1">
+                <img src="ssh.jpg" alt="Image 2"><br><br></a>
+        <h4>Innovations in space technology are pushing the boundaries of exploration.</h4>
+        <h3>Upcoming Missions</h3>
+        <ul>
+            <li><strong>NASA’s Artemis Program:</strong> Aiming to return humans to the Moon and establish a sustainable presence.</li>
+            <li><strong>SpaceX Starship:</strong> Designed for interplanetary travel and Mars colonization.</li>
+            <li><strong>Asteroid Mining Projects:</strong> Missions like OSIRIS-REx and future commercial efforts to extract resources from asteroids.</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutron</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+        }
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+        .fact-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">Neutron stars are incredibly dense remnants of supernova explosions.</p>
+        <img id="fact-image" class="fact-image" src="n1.webp" alt="Neutron">
+    </div>
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button>
+        <button onclick="nextFact()">&#8594;</button>
+    </div>
+    <script>
+        let facts = [{"text": "Neutron stars are incredibly dense remnants of supernova explosions.", "image": "n1.webp"}, {"text": "A teaspoon of neutron star material would weigh about a billion tons.", "image": "n2.jpg"}, {"text": "They often spin rapidly and emit beams of radiation, called pulsars.", "image": "n3.jpg"}, {"text": "Some neutron stars become magnetars, with magnetic fields trillions of times stronger than Earth’s.", "image": "n4.jpg"}];
+        let currentIndex = 0;
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+            document.getElementById("fact-image").src = facts[currentIndex].image;
+        }
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+</body>
+</html>

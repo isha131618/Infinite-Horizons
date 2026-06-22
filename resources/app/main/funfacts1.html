@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: 100px;
+            padding: 5px;
+            margin-right: 100px;
+            font-weight: bold;
+            border: 3px double powderblue;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text"></p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: "Voyager 1 is the farthest human-made object – It’s over 24 billion km from Earth and still transmitting data! 📡" },
+            { text: "Both Voyagers carry a 'Golden Record' – It has Earth sounds, greetings, and music, hoping aliens might find it. 🛸" },
+            { text: "New Horizons is the first probe to visit Pluto – It flew by in 2015, revealing Pluto’s icy mountains and heart-shaped plains. ❄️❤️" },
+            { text: "Parker Solar Probe is the fastest spacecraft – It’s moving at 700,000 km/h (430,000 mph) as it studies the Sun. ☀️🔥" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+
+        // ✅ Initialize first fact
+        updateFact();
+    </script>
+
+</body>
+</html>

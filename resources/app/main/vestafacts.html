@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+           
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-left:100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border:3px double powderblue;
+            
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text">Vesta has a short day, completing one full rotation in about 5.3 hours, making it one of the fastest-rotating large asteroids.</p>
+        <img id="fact-image" class="fact-image" src="vesta.jpg" alt="Eris">
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            { text: "Vesta has a short day, completing one full rotation in about 5.3 hours, making it one of the fastest-rotating large asteroids", image: "vesta.jpg" },
+            { text: "Unlike a perfect sphere, Vesta has an irregular shape due to massive impacts, especially the Rheasilvia crater, which gives it a slightly squashed appearance.", image: "rhea.jpg" },
+            { text: "While Vesta is mostly dry, traces of hydrated minerals have been detected, possibly delivered by past asteroid impacts rather than being native to Vesta itself.", image: "vesta.jpg" },
+            { text: "Surface temperatures on Vesta can range from about -190°F (-123°C) at night to nearly 90°F (32°C) during the day, depending on sunlight exposure. ", image: "temp.png" },
+            { text: "Vesta is named after Vesta, the Roman goddess of hearth, home, and family. ", image: "goddess.jpg" },
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+            document.getElementById("fact-image").src = facts[currentIndex].image;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+    </script>
+
+</body>
+</html>

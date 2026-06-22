@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saturn</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #f3f3f3;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('saturnbg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: #fff8dc;
+            text-shadow: 3px 3px #daa520;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .overview {
+            padding: 50px 25px;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #ffd700;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #ffd700;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+
+        table, th, td {
+            border: 1px solid #888;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #ffd700;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #ffd700;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #444;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Saturn</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Saturn</h2>
+    <a href="saturn_facts.html" target="right">
+        <img src="saturn2.jpg" alt="Saturn" class="planet-image">
+    </a>
+
+    <p>
+        Saturn is the sixth planet from the Sun and is most famous for its magnificent ring system, made primarily of ice particles and rocky debris. It's a gas giant, second in size only to Jupiter, and is primarily composed of hydrogen and helium.
+    </p>
+
+    <p>
+        The planet is known for its yellowish hue and banded appearance. Its low density means it would float in water, and it rotates rapidly, with a day lasting only about 10.7 hours.
+    </p>
+
+    <p>
+        Saturn has over 140 known moons, including Titan—larger than Mercury and known for its thick atmosphere and liquid methane lakes. Other notable moons include Enceladus, which ejects water vapor and shows signs of a subsurface ocean.
+    </p>
+
+    <p>
+        The Cassini spacecraft, which orbited Saturn from 2004 to 2017, provided a wealth of information about the planet, its rings, and its moons before dramatically plunging into the planet’s atmosphere at the end of its mission.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Saturn at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>116,460 km (72,366 miles)</td></tr>
+        <tr><td>Distance from Sun</td><td>1.43 billion km (890 million miles)</td></tr>
+        <tr><td>Orbital Period</td><td>29.5 Earth years</td></tr>
+        <tr><td>Rotation Period</td><td>10.7 hours</td></tr>
+        <tr><td>Atmosphere</td><td>Hydrogen, Helium</td></tr>
+        <tr><td>Moons</td><td>140+ known</td></tr>
+        <tr><td>Rings</td><td>Yes (most prominent of any planet)</td></tr>
+        <tr><td>Magnetic Field</td><td>Yes (powerful)</td></tr>
+        <tr><td>Famous Moon</td><td>Titan</td></tr>
+        <tr><td>First Spacecraft Visit</td><td>Pioneer 11 (1979)</td></tr>
+        <tr><td>Major Mission</td><td>Cassini (2004–2017)</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/epZdZaEQhS0" title="Saturn 101 | National Geographic" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/33yOQsptNis?si=UwX7RtzmSc9RGNSn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+</div>
+
+</body>
+</html>

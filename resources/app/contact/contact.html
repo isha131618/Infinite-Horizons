@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Infinite Horizons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <div class="left-section">
+                <h1>Contact Mission Control</h1>
+                <p>Have questions about the cosmos? Contact us to explore infinite horizons together.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> mission@infinitehorizons.com</p>
+                    <p><i class="fas fa-phone"></i> +123-456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Space Station Alpha, Galaxy HQ</p>
+                    <p><a href="#">Astronaut Support</a></p>
+                </div>
+                <h3>Other Inquiries</h3>
+                <p>Your feedback is vital for our journey through the stars.</p>
+            </div>
+            <div class="right-section">
+                <h2>Send a Message</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Phone Number" required>
+                    <textarea placeholder="How can we assist you?" rows="4" required></textarea>
+                    <button type="submit">Launch Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting until validation passes
+    
+            const firstName = this.querySelector('input[placeholder="First Name"]');
+            const lastName = this.querySelector('input[placeholder="Last Name"]');
+            const email = this.querySelector('input[placeholder="Your Email"]');
+            const phone = this.querySelector('input[placeholder="Phone Number"]');
+            const message = this.querySelector('textarea');
+    
+            // Clear previous error styles
+            [firstName, lastName, email, phone, message].forEach(input => {
+                input.style.borderColor = '#00c3ff';
+            });
+    
+            let isValid = true;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[0-9]{7,15}$/; // Allows 7 to 15 digits
+    
+            // Validate each field
+            if (!firstName.value.trim()) {
+                markError(firstName);
+                isValid = false;
+            }
+            if (!lastName.value.trim()) {
+                markError(lastName);
+                isValid = false;
+            }
+            if (!emailRegex.test(email.value.trim())) {
+                markError(email);
+                isValid = false;
+            }
+            if (!phoneRegex.test(phone.value.trim())) {
+                markError(phone);
+                isValid = false;
+            }
+            if (!message.value.trim()) {
+                markError(message);
+                isValid = false;
+            }
+    
+            if (isValid) {
+                alert("🚀 Message launched successfully!");
+                this.reset();
+            } else {
+                alert("⚠ Please fill out all fields correctly.");
+            }
+    
+            function markError(input) {
+                input.style.borderColor = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

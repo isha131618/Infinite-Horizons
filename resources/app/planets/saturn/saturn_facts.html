@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saturn Facts</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #f5de8c;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin: 0 100px;
+            font-weight: bold;
+            border: 3px double #f5de8c;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid #f5de8c;
+            color: #f5de8c;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #f5de8c;
+            color: #0e0e0e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fact-container">
+    <p id="fact-text" class="fact-text">Saturn is famous for its stunning ring system.</p>
+    <img id="fact-image" class="fact-image" src="../dyn.avif" alt="Saturn">
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevFact()">&#8592;</button>
+    <button onclick="nextFact()">&#8594;</button>
+</div>
+
+<script>
+    let facts = [
+        { text: "Saturn is famous for its stunning ring system." },
+        { text: "Saturn has 247 moons."},
+        { text: "The rings of Saturn are made of ice and rock particles." },
+        { text: "Saturn is the second-largest planet in our solar system." },
+        { text: "A day on Saturn is about 10.7 Earth hours long." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFact() {
+        document.getElementById("fact-text").textContent = facts[currentIndex].text;
+    }
+
+    function nextFact() {
+        currentIndex = (currentIndex + 1) % facts.length;
+        updateFact();
+    }
+
+    function prevFact() {
+        currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+        updateFact();
+    }
+</script>
+
+</body>
+</html>

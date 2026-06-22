@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-weight: bold;
+            border: 3px double powderblue;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text"></p> <!-- Removed hardcoded text -->
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+            "The oldest satellite still in orbit is Vanguard 1 – Launched in 1958, it’s still out there, though it no longer communicates. 📡🚀",
+            "Sputnik 1 was the first-ever satellite – The Soviet Union launched it in 1957, kicking off the Space Race. 🏆🛰️",
+            "LAGEOS-1 satellite will orbit for 8.4 million years – It carries a plaque showing Earth’s continents past, present, and future. 🌍🔄",
+            "There are over 8,500 satellites in orbit – But only about 4,500 are working; the rest are just space junk. 🗑️🛰️"
+        ];
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex];
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+
+        // ✅ Initialize first fact
+        updateFact();
+    </script>
+
+</body>
+</html>

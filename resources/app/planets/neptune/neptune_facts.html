@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neptune Facts</title>
+    <style>
+        body {
+            background-color: #001f3f;
+            color: #cceeff;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin: 0 100px;
+            font-weight: bold;
+            border: 3px double #cceeff;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid #cceeff;
+            color: #cceeff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #cceeff;
+            color: #001f3f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fact-container">
+    <p id="fact-text" class="fact-text">Neptune is the farthest planet from the Sun in our solar system.</p>
+    <img id="fact-image" class="fact-image" src="../dyn.avif" alt="Neptune">
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevFact()">&#8592;</button>
+    <button onclick="nextFact()">&#8594;</button>
+</div>
+
+<script>
+    let facts = [
+        { text: "Neptune is the farthest planet from the Sun in our solar system." },
+        { text: "It has the strongest winds of any planet, reaching over 2,000 km/h." },
+        { text: "Neptune has 14 known moons; the largest is Triton." },
+        { text: "A year on Neptune lasts 165 Earth years." },
+        { text: "Its atmosphere is made up of hydrogen, helium, and methane." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFact() {
+        document.getElementById("fact-text").textContent = facts[currentIndex].text;
+    }
+
+    function nextFact() {
+        currentIndex = (currentIndex + 1) % facts.length;
+        updateFact();
+    }
+
+    function prevFact() {
+        currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+        updateFact();
+    }
+</script>
+
+</body>
+</html>

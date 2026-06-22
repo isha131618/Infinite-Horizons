@@ -1,0 +1,214 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Phenomena</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+       }
+
+       /* Top Section with Image */
+       .hero {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url(cosmic.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+       }
+       .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          max-width: 1000px;
+          margin: 40px auto;
+          padding: 30px;
+      }
+
+      .grid-container div {
+    padding: 0; /* Remove padding to avoid affecting the image dimensions */
+    background: rgb(71, 71, 71);
+    text-align: center;
+    height: 300px; /* Set a fixed height for the grid items */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+       /* Dark overlay effect */
+       .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+       }
+
+       .overlay-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+       }
+
+       h1 {
+        font-size: 6em;
+        font-family: 'Lilita One', cursive;
+        color: beige;
+
+        
+        text-decoration: underline;
+        text-align: center;
+        
+        text-shadow: 3px 3px palevioletred;
+        animation:fadeIn 3s ease-in-out forwards;
+
+       }
+       @keyframes fadeIn {
+        from{opacity:0;transform:scale(0.8);}
+        to{opacity:1;transform: scale(1);}
+       }
+
+       p {
+        font-size: 1.2em;
+        color: palevioletred;
+        text-shadow: 1px 1px whitesmoke;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+       }
+
+       /* Bottom Section (White Background) */
+       .overview {
+        text-align: left;
+        background-color:black;
+        padding: 50px 20px;
+        text-align: center;
+        
+        
+       }
+
+       h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(225, 220, 220);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+
+       }
+       h3{
+        font-size: 1.5em;
+        color: rgb(207, 200, 200);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+       }
+
+       h4 {
+        font-size: 1em;
+        color: rgb(158, 154, 154);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+        text-align: left;
+        margin: 40px;
+        margin-left: 40px;
+       }
+       
+       ol {
+        margin-left: 100px;
+    
+        display: inline-block;
+       }
+       button {
+            width: 50%;
+            padding: 10px;
+            background:palevioletred;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            margin:100px
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Section with Image -->
+    <div class="hero">
+        <div class="overlay-content">
+            <h1 style="text-decoration:none" ><span style="font-size: larger;">Cosmic Phenomena</span></h1><br>
+            <p>The universe is a vast and dynamic place, filled with incredible cosmic events that showcase the immense power of nature. From cataclysmic explosions to mysterious ripples in space-time, these phenomena shape galaxies, create planets, and sometimes even challenge our understanding of physics.</p>
+        </div>
+    </div>
+
+    <div class="overview">
+        <h2>Overview</h2><br>
+        <h4>The cosmos is filled with incredible events that shape its evolution. From the birth and death of stars to the collisions of galaxies and the mysterious forces driving cosmic expansion, every phenomenon plays a role in shaping the vast, ever-changing universe. With future advancements in space telescopes and observatories, humanity will continue to uncover more about these cosmic wonders, deepening our understanding of the universe and our place within it.</h4>
+        <br>
+    
+        
+        <h2 style="text-decoration: none;">Supernovae: The Death of a Star in a Cosmic Explosion</h2><br>
+        <a href="supernova.html" target="right">
+        <img src="super.jpeg" alt="supernova" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>A supernova is the spectacular explosion of a star, marking either its violent end or the beginning of something new. These stellar detonations occur when a massive star runs out of nuclear fuel, causing its core to collapse under gravity. This triggers a massive explosion that outshines entire galaxies for a short period. Supernovae play a critical role in spreading heavy elements like carbon, oxygen, and iron across space, seeding future stars and planets. Some of the most famous supernovae in history have been visible from Earth, such as the one observed in 1054 AD, which led to the formation of the Crab Nebula.<br><br>
+            Another type of supernova, known as a Type Ia supernova, occurs in binary star systems when a white dwarf star siphons too much material from its companion, leading to an uncontrolled nuclear reaction. These explosions are used as cosmic measuring tools because they always explode with the same brightness, helping astronomers determine the distances to faraway galaxies.   
+        </h4><br>
+        
+        <h2 style="text-decoration: none;">Black Holes: The Bottomless Pits of Space</h2><br>
+        <a href="blackhole.html" target="right">
+        <img src="blackh.jpg" alt="blackhole" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>Black holes are regions of space where gravity is so intense that nothing, not even light, can escape. They form when the core of a massive star collapses after a supernova explosion. The boundary surrounding a black hole, known as the event horizon, is the point of no return—once something crosses it, it is lost forever to the singularity at the center.
+            <br><br>Supermassive black holes, found at the centers of most galaxies, can have masses equivalent to billions of Suns. The one at the center of the Milky Way, known as Sagittarius A*, has a mass of about four million Suns. Black holes can also merge, producing gravitational waves—ripples in space-time first detected by the LIGO observatory in 2015. These waves travel across the universe, carrying information about some of the most violent events in existence.
+            
+            </h4><br>
+        
+        <h2 style="text-decoration: none;">Neutron Stars and Pulsars: The Ultra-Dense Relics of Dead Stars        </h2><br>
+        <a href="neutron.html" target="right">
+        <img src="neutron.jpg" alt="neutron" style="width: 100%; max-width: 225px; margin: 20px auto;"><br></a>
+        <h4>When a massive star explodes in a supernova, it sometimes leaves behind an incredibly dense core called a neutron star. These stars are only about 20 kilometers in diameter but pack more mass than the Sun, making them among the densest objects in the universe. A single teaspoon of neutron star material would weigh as much as a mountain.
+            <br><br>Some neutron stars spin rapidly, emitting powerful beams of electromagnetic radiation. These are known as pulsars, and they act like cosmic lighthouses, flashing beams of light as they rotate. The first pulsar was discovered in 1967 by astronomer Jocelyn Bell Burnell, and their precise, rhythmic pulses have been used to test Einstein’s theory of relativity and even search for gravitational waves.
+            
+            </h4><br>
+        
+        <h2 style="text-decoration: none;">Dark Matter and Dark Energy: The Hidden Forces of the Universe
+        </h2><br>
+        <a href="darkmatter.html" target="right">
+        <img src="darkmatter.jpg" alt="darkmatter" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+        <h4>Dark matter is an invisible substance that does not emit or interact with light, yet it exerts a strong gravitational pull on galaxies and cosmic structures. Scientists believe it makes up about 27% of the universe’s mass, yet its exact nature remains unknown.
+            <br><br>Dark energy, even more mysterious, is thought to be responsible for the accelerated expansion of the universe. Unlike gravity, which pulls objects together, dark energy acts as a repulsive force, stretching space itself. Together, dark matter and dark energy make up about 95% of the universe, meaning that most of the cosmos is still an enigma to scientists.
+            
+            </h4><br>
+            <h2 style="text-decoration: none;">Exoplanets and Rogue Planets: Worlds Beyond Our Solar System
+            </h2><br>
+            <a href="exoplanets.html" target="right">
+            <img src="exoplanets.jpg" alt="exoplanets" style="width: 20%; max-width: 820px; margin: 20px auto;"><br></a>
+            <h4>Exoplanets are planets orbiting stars beyond our Sun. Since the first confirmed discovery in 1992, thousands of exoplanets have been identified, ranging from gas giants larger than Jupiter to rocky, Earth-like planets that may harbor life. Some of the most intriguing exoplanets, such as those in the TRAPPIST-1 system, exist within the habitable zone, where conditions might allow liquid water to exist.
+                <br><br>Rogue planets, on the other hand, do not orbit any star. These planets were likely ejected from their home solar systems due to gravitational interactions and now drift through interstellar space in complete darkness. Some studies suggest there may be more rogue planets in the galaxy than stars, making them one of the most mysterious planetary objects in existence.
+                
+                </h4><br>
+    <br>
+</div>
+    
+
+</body>
+</html>

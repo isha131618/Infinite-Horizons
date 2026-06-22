@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+       }
+
+       /* Top Section with Image */
+       .hero {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url(backhole3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+       }
+
+       /* Dark overlay effect */
+       .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+       }
+
+       .overlay-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+       }
+
+       h1 {
+        font-size: 6em;
+        font-family: 'Lilita One', cursive;
+        color: beige;
+
+        
+        text-decoration: underline;
+        text-align: center;
+        
+        text-shadow: 3px 3px palevioletred;
+        animation:fadeIn 3s ease-in-out forwards;
+
+       }
+       @keyframes fadeIn {
+        from{opacity:0;transform:scale(0.8);}
+        to{opacity:1;transform: scale(1);}
+       }
+
+       p {
+        font-size: 1.2em;
+        color: palevioletred;
+        text-shadow: 1px 1px whitesmoke;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+       }
+
+       /* Bottom Section (White Background) */
+       .section {
+        text-align: left;
+        background-color:black;
+        padding: 50px 20px;
+        text-align: left;
+
+        
+        
+       }
+
+       h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(225, 220, 220);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+
+       }
+       h3{
+        font-size: 1.5em;
+        color: rgb(207, 200, 200);
+        text-decoration: underline;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 40px;
+        margin-left: 40px;
+       }
+
+       h4 {
+        font-size: 1;
+        color: rgb(158, 154, 154);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+        text-align: left;
+        margin: 40px;
+        margin-left: 40px;
+       }
+       
+       ul {
+        font-size: 1;
+        margin-left: 100px;
+        color: rgb(158, 154, 154);
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+    
+        display: inline-block;
+       }
+       .image-container img {
+            display: inline-block;
+            width: 45%; /* Adjust width as needed */
+            margin-right: 5px; /* Space between images */
+        }
+
+    </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay-content">
+        <h1 style="text-decoration:none" >Comets</h1><br>
+        <p>Comets are the snowballs of the cosmos — ancient, mysterious, and burning bright across the night sky.</p>
+    </div>
+</div>
+
+  <div class="section">
+    <h2 class="emoji">🌍 1. Origin and Formation</h2>
+    <h4>Comets are icy leftovers from the early solar system, forming 4.6 billion years ago. They mostly come from two places:</h4>
+    <ul>
+      <li><strong>Oort Cloud:</strong> A massive, spherical shell surrounding the solar system, source of long-period comets.</li>
+      <li><strong>Kuiper Belt:</strong> A disk-like region beyond Neptune, source of short-period comets like Halley’s.</li>
+    </ul>
+    <h4>These comets are ancient "time capsules" containing pristine materials from the solar system’s birth.</h4>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">☀️ 2. What Happens Near the Sun?</h2>
+    <h4>As a comet approaches the Sun, it becomes active due to solar heating. This causes ices to sublimate, forming:</h4>
+    <ul>
+      <li><strong>Coma:</strong> A glowing cloud of gas and dust around the nucleus.</li>
+      <li><strong>Ion Tail:</strong> Bluish tail made of gases blown directly away by solar wind.</li>
+      <li><strong>Dust Tail:</strong> White or yellowish curved tail made of dust particles.</li>
+    </ul>
+    <h4>Sometimes, a third <strong>sodium or anti-tail</strong> is also visible!</h4>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">🧪 3. Chemical Composition</h2>
+    <p>Comets are rich in volatile and organic molecules:</p>
+    <ul>
+      <li>Water vapor (H₂O)</li>
+      <li>Carbon dioxide (CO₂), Carbon monoxide (CO)</li>
+      <li>Methanol, formaldehyde, ammonia</li>
+      <li>Hydrogen cyanide (HCN)</li>
+      <li>Amino acids like glycine</li>
+      <li>Polycyclic Aromatic Hydrocarbons (PAHs)</li>
+    </ul>
+    <h4>This supports theories that comets could have helped <strong>seed life</strong> on Earth!</h4>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">📜 4. Famous Comets</h2>
+    <ul>
+      <li><strong>Halley's Comet:</strong> Seen every 76 years. Predicted by Edmond Halley. Next in 2061.</li>
+      <li><strong>Great Comet of 1811:</strong> Visible for over 260 days!</li>
+      <li><strong>Shoemaker-Levy 9:</strong> Crashed into Jupiter in 1994—massive impact!</li>
+      <li><strong>Comet NEOWISE (2020):</strong> Bright, visible with the naked eye, had double tails.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">🛡️ 5. Impact Threats?</h2>
+    <h4>Yes! Comet impacts are rare but dangerous. Some believe a comet triggered the Younger Dryas cold period ~12,800 years ago. NASA tracks Near-Earth Objects and launched DART to test planetary defense.</h4>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">🔭 6. How to See a Comet</h2>
+    <ul>
+      <li>Best during dawn or dusk with clear skies.</li>
+      <li>Use binoculars or small telescopes for details.</li>
+      <li>Check NASA or space apps for comet locations and visibility dates.</li>
+      <li>Look near the horizon in dark, low-light areas.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">💡 7. Weird and Fun Facts</h2>
+    <ul>
+      <li>Comets can smell awful! Sulfur, vinegar, alcohol, horse poop — yes, scientists have detected these compounds.</li>
+      <li>Comet tails always point away from the Sun due to solar wind pressure.</li>
+      <li>“Dead” comets can look like asteroids once they lose their volatile gases.</li>
+      <li>Some comets split into pieces while passing near planets or the Sun.</li>
+      <li>Spinning comets can cause their tails to twist like corkscrews.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="emoji">🌀 Bonus: Cultural Beliefs</h2>
+    <ul>
+      <li>Ancient Romans and Greeks believed comets were omens of war or the death of kings.</li>
+      <li>In China, comets were called “broom stars” and were seen as warnings from heaven.</li>
+      <li>Aztecs associated comets with disaster and divine punishment.</li>
+      <li>Medieval Europe saw them as bad luck — Halley's Comet was blamed for the Black Death and wars.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html> 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Facts</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: 100px;
+            padding: 5px;
+            margin-right: 100px;
+            font-weight: bold;
+            border: 3px double powderblue;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+            color: rgb(70, 69, 69);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fact-container">
+        <p id="fact-text" class="fact-text"></p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevFact()">&#8592;</button> <!-- Left arrow -->
+        <button onclick="nextFact()">&#8594;</button> <!-- Right arrow -->
+    </div>
+
+    <script>
+        let facts = [
+  { text: "1️⃣ 🌌 Nebulae are giant clouds of gas and dust in space, often spanning light-years in size." },
+  { text: "2️⃣ ⭐ Many nebulae are stellar nurseries where new stars are born." },
+  { text: "3️⃣ 🌈 The colors in nebula images come from different gases glowing when energized." },
+  { text: "4️⃣ 🌫️ Some nebulae, like the Horsehead Nebula, are so dense they block light from behind." },
+  { text: "5️⃣ 💥 Supernova remnants like the Crab Nebula are formed when massive stars explode." },
+  { text: "6️⃣ 🔭 The Orion Nebula is one of the brightest and closest star-forming regions to Earth." },
+  { text: "7️⃣ 🧪 Nebulae contain hydrogen, helium, and traces of elements like oxygen and carbon." },
+  { text: "8️⃣ 🎨 Most nebula images are false-color composites that highlight invisible wavelengths." },
+  { text: "9️⃣ ♻️ Nebulae help recycle material from dead stars to form new ones." },
+  { text: "🔟 👁️ The Helix Nebula is known as the 'Eye of God' due to its eerie appearance." },
+  { text: "1️⃣1️⃣ 🌠 Nebulae can be seen from Earth with binoculars or small telescopes." },
+  { text: "1️⃣2️⃣ 🔬 Infrared telescopes can peer through dust clouds to reveal hidden stars." },
+  { text: "1️⃣3️⃣ ☄️ Some nebulae are leftovers from planetary systems or dying stars." },
+  { text: "1️⃣4️⃣ 🌀 A single nebula can weigh more than 10,000 times the mass of our Sun." },
+  { text: "1️⃣5️⃣ 🛸 Ancient civilizations may have seen bright nebulae and interpreted them as mythical phenomena." }
+];
+
+
+        let currentIndex = 0;
+
+        function updateFact() {
+            document.getElementById("fact-text").textContent = facts[currentIndex].text;
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            updateFact();
+        }
+
+        function prevFact() {
+            currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+            updateFact();
+        }
+
+        // ✅ Initialize first fact
+        updateFact();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earth Facts</title>
+    <style>
+        body {
+            background-color: #003300;
+            color: #CCFF99;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin: 0 100px;
+            font-weight: bold;
+            border: 3px double #99FFCC;
+        }
+
+        .fact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fact-text {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .fact-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-buttons button {
+            background-color: transparent;
+            border: 2px solid #CCFF99;
+            color: #CCFF99;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #CCFF99;
+            color: #003300;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fact-container">
+    <p id="fact-text" class="fact-text">Earth is the third planet from the Sun.</p>
+    <img id="fact-image" class="fact-image" src="../dyn.avif" alt="Earth">
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevFact()">&#8592;</button>
+    <button onclick="nextFact()">&#8594;</button>
+</div>
+
+<script>
+    let facts = [
+        { text: "Earth is the third planet from the Sun." },
+        { text: "Earth has one natural satellite, the Moon." },
+        { text: "About 71% of Earth's surface is covered in water." },
+        { text: "Earth's atmosphere is mostly nitrogen and oxygen." },
+        { text: "Earth supports life due to its unique conditions." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFact() {
+        document.getElementById("fact-text").textContent = facts[currentIndex].text;
+    }
+
+    function nextFact() {
+        currentIndex = (currentIndex + 1) % facts.length;
+        updateFact();
+    }
+
+    function prevFact() {
+        currentIndex = (currentIndex - 1 + facts.length) % facts.length;
+        updateFact();
+    }
+</script>
+
+</body>
+</html>

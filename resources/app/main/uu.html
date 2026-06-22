@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Bar with Button</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .moving-bar {
+            width: 100px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: left 1s ease-in-out;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quick Facts</h1>
+    <p id="fact">A year on Eris is equal to 557 Earth years.</p>
+
+    <div class="container">
+        <div class="moving-bar" id="bar"></div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="moveBar()"></button>
+    </div>
+
+    <script>
+        let facts = [
+            "A year on Eris is equal to 557 Earth years.",
+            "Pluto was reclassified as a dwarf planet in 2006.",
+            "Eris is one of the most massive dwarf planets in the Solar System.",
+            "Eris has a moon named Dysnomia."
+        ];
+
+        let currentIndex = 0;
+
+        function moveBar() {
+            let bar = document.getElementById("bar");
+            let factText = document.getElementById("fact");
+
+            // Move bar across
+            bar.style.left = "100%";
+            
+            // Wait for animation to finish before updating
+            setTimeout(() => {
+                bar.style.left = "0"; // Reset bar position
+
+                // Update fact text
+                currentIndex = (currentIndex + 1) % facts.length;
+                factText.textContent = facts[currentIndex];
+            }, 1000); // Wait for 1 second (same as transition time)
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+

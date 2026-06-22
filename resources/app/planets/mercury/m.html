@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercury</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #f3f3f3;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('mbp.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: #f2e9dc;
+            text-shadow: 3px 3px #b5651d;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .overview {
+            padding: 50px 25px;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #ffae42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #ffae42;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+
+        table, th, td {
+            border: 1px solid #888;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #ffae42;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #ffae42;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #444;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Mercury</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Mercury</h2>
+    <a href="mercury_facts.html" target="right">
+        <img src="mercury.jpg" alt="Mercury" class="planet-image">
+    </a>
+
+    <p>
+        Mercury is the innermost planet in the solar system and the smallest of the eight planets, with a diameter of just 4,879 kilometers. With no atmosphere to retain heat, Mercury endures the most dramatic temperature fluctuations of any planet, from -180°C at night to over 430°C during the day.
+    </p>
+
+    <p>
+        It has a heavily cratered, rocky surface resembling Earth's Moon, due to constant bombardment by meteoroids over billions of years. Despite being close to the Sun, Mercury is not the hottest planet—Venus holds that title thanks to its thick atmosphere.
+    </p>
+
+    <p>
+        A day on Mercury (sunrise to sunrise) lasts 176 Earth days. However, it only takes 88 Earth days to complete one orbit around the Sun, making its year half as long as its day.
+    </p>
+
+    <p>
+        Mercury has a massive iron core that makes up about 85% of its radius, surrounded by a silicate mantle. Scientists believe the planet once had a thicker outer shell, much of which may have been stripped away in a massive collision.
+    </p>
+
+    <p>
+        Named after the Roman god Mercury—the swift-footed messenger of the gods—the planet's speed around the Sun inspired its name. It has no moons or rings, and its thin exosphere contains trace amounts of hydrogen, helium, oxygen, sodium, and potassium.
+    </p>
+
+    <p>
+        Mercury has been visited by spacecraft such as <strong>Mariner 10</strong> in the 1970s and <strong>MESSENGER</strong> (2004–2015), which mapped the entire surface and provided detailed data about its composition and magnetic field. The <strong>BepiColombo mission</strong>, launched by ESA and JAXA, is currently en route and expected to arrive in 2025.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Mercury at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>4,879 km (3,032 miles)</td></tr>
+        <tr><td>Distance from Sun</td><td>57.9 million km (36 million miles)</td></tr>
+        <tr><td>Orbital Period</td><td>88 Earth days</td></tr>
+        <tr><td>Rotation Period</td><td>59 Earth days</td></tr>
+        <tr><td>Length of Solar Day</td><td>176 Earth days</td></tr>
+        <tr><td>Temperature Range</td><td>-180°C to 430°C</td></tr>
+        <tr><td>Atmosphere</td><td>Exosphere (oxygen, sodium, hydrogen, helium, potassium)</td></tr>
+        <tr><td>Moons</td><td>0</td></tr>
+        <tr><td>Rings</td><td>None</td></tr>
+        <tr><td>Magnetic Field</td><td>Yes (1% of Earth's strength)</td></tr>
+        <tr><td>First Spacecraft Visit</td><td>Mariner 10 (1974)</td></tr>
+        <tr><td>Most Recent Mission</td><td>MESSENGER (2004-2015)</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/0KBjnNuhRHs" title="Mercury 101 | National Geographic" frameborder="0" allowfullscreen></iframe>
+
+        <iframe src="https://www.youtube.com/embed/rX_NCCpw5Uo" title="Planet Mercury Explained in 10 Minutes" frameborder="0" allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XhKAxwfNW_c?si=_eTsZ125MNl5vx6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>

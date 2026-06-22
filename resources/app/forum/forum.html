@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Forum | Infinite Horizons</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <div class="forum-container">
+        <img src="../images/header.png" alt="Space Header" class="header-image">
+        <h1>🚀 Space Forum</h1>
+
+        <div class="post-form">
+            <textarea id="postText" placeholder="What's on your mind, space traveler?"></textarea>
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="submitPost()">Post</button>
+        </div>
+
+        <div id="postsContainer"></div>
+    </div>
+
+    <script src="forum.js"></script>
+</body>
+</html>

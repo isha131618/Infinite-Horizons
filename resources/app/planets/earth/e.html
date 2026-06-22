@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earth</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0e2f2f;
+            color: #e1f5e1;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('earthbg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 51, 51, 0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: #b3ffb3;
+            text-shadow: 3px 3px #009966;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .overview {
+            padding: 50px 25px;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #66ff66;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #66ff66;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+
+        table, th, td {
+            border: 1px solid #777;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #004d33;
+            color: #b3ffcc;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #66ff66;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #555;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Earth</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Earth</h2>
+    <a href="earth_facts.html" target="right">
+        <img src="earth1.jpg" alt="Earth" class="planet-image">
+    </a>
+
+    <p>
+        Earth is the third planet from the Sun and the only known planet to support life. Its surface is covered 71% by water and has a breathable atmosphere that sustains millions of species of organisms, including humans.
+    </p>
+
+    <p>
+        Earth has a molten core, a dynamic atmosphere, tectonic plates, and a protective magnetic field. Its seasons are caused by its axial tilt, and it orbits the Sun every 365.25 days.
+    </p>
+
+    <p>
+        Our planet has one natural satellite, the Moon, which influences tides and stabilizes Earth’s rotation. Earth is the densest planet in the solar system and the fifth-largest in terms of diameter.
+    </p>
+
+    <p>
+        Earth formed about 4.5 billion years ago and has undergone massive geological and biological transformations. It is the only planet known to have plate tectonics, and its biosphere makes it incredibly unique.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Earth at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>12,742 km (7,918 miles)</td></tr>
+        <tr><td>Distance from Sun</td><td>149.6 million km (93 million miles)</td></tr>
+        <tr><td>Orbital Period</td><td>365.25 days</td></tr>
+        <tr><td>Rotation Period</td><td>23.9 hours</td></tr>
+        <tr><td>Surface Water</td><td>71%</td></tr>
+        <tr><td>Atmosphere</td><td>Nitrogen, Oxygen, Argon, CO₂</td></tr>
+        <tr><td>Moons</td><td>1 (The Moon)</td></tr>
+        <tr><td>Rings</td><td>None</td></tr>
+        <tr><td>Magnetic Field</td><td>Yes (strong, protective)</td></tr>
+        <tr><td>Life</td><td>Abundant and diverse</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LinWJsangs4?si=yMlXu8nc24UCGmqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HCDVN7DCzYE?si=upaTLqmu_eUjP31i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>

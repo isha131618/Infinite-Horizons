@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Venus</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #2d1e2f;
+            color: #f3e5f5;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('v.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .overlay-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 6em;
+            font-family: 'Lilita One', cursive;
+            color: beige;
+            text-shadow: 3px 3px #880e4f;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .overview {
+            padding: 50px 25px;
+        }
+        h2 {
+            font-size: 2.8em;
+            color: #ff4081;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+        }
+        .planet-image {
+            display: block;
+            margin: 0 auto 20px;
+            border: 5px solid #ff4081;
+            border-radius: 12px;
+            max-width: 320px;
+        }
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 85%;
+        }
+        table, th, td {
+            border: 1px solid #888;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4a148c;
+            color: #ff80ab;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .video-container iframe {
+            width: 360px;
+            height: 215px;
+            border: 4px solid #ff4081;
+            border-radius: 10px;
+        }
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: #6a1b9a;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay-content">
+        <h1>Venus</h1>
+    </div>
+</div>
+
+<div class="overview">
+    <h2>About Venus</h2>
+    <a href="venus_facts.html" target="right">
+        <img src="venus.webp" alt="Venus" class="planet-image">
+    </a>
+
+    <p>
+        Venus is the second planet from the Sun and is similar in size and structure to Earth, earning it the nickname "Earth's twin." However, its thick, toxic atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system with surface temperatures hot enough to melt lead.
+    </p>
+
+    <p>
+        The planet's surface is obscured by dense clouds of sulfuric acid, but radar mapping has revealed mountains, valleys, and vast plains. Venus has a slow rotation, taking about 243 Earth days to complete one rotation, and it rotates in the opposite direction to most planets, causing the Sun to rise in the west and set in the east.
+    </p>
+
+    <p>
+        Despite its harsh conditions, Venus has been a target for exploration. Missions like NASA's Magellan have mapped its surface, and future missions aim to further study its atmosphere and geology.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Venus at a Glance</h2>
+    <table>
+        <tr><th>Feature</th><th>Details</th></tr>
+        <tr><td>Diameter</td><td>12,104 km</td></tr>
+        <tr><td>Distance from Sun</td><td>108.2 million km</td></tr>
+        <tr><td>Orbital Period</td><td>225 Earth days</td></tr>
+        <tr><td>Rotation Period</td><td>243 Earth days (retrograde)</td></tr>
+        <tr><td>Surface Temperature</td><td>~465°C</td></tr>
+        <tr><td>Atmosphere</td><td>Carbon dioxide, nitrogen</td></tr>
+        <tr><td>Moons</td><td>None</td></tr>
+        <tr><td>Rings</td><td>None</td></tr>
+        <tr><td>Magnetic Field</td><td>Weak</td></tr>
+        <tr><td>First Spacecraft Visit</td><td>Mariner 2 (1962)</td></tr>
+        <tr><td>Most Recent Mission</td><td>Akatsuki (2015-present)</td></tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <h2>Watch and Learn</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/djP-IdHFQWU?si=kbUZuYWbaxp9FLG9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BvXa1n9fjow?si=keE6Th-M0pQpan73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>
